@@ -1,6 +1,6 @@
 # ORCA_run
 
-ORCA_run is a shell/bash script to help users run electronic structure calculations with ORCA software developed and maintained by prof. Frank Neese and coworkers at Max Planck Institute for Chemical Energy Conversion.
+orca_run is a shell/bash script to help users run electronic structure calculations with ORCA software developed and maintained by prof. Frank Neese and coworkers at Max Planck Institute for Chemical Energy Conversion.
 
 It's official website can be acessed at: **https://orcaforum.kofo.mpg.de**
 
@@ -23,7 +23,7 @@ To use ORCA_run, first you need to set the path to ORCA (directory) in the ORCAP
 
 Then, the command to run an ORCA job called from ORCA_run follows the syntax:
 
-> orca_run -i input.inp -o output.out -p nprocs -m maxcore -a "file1.gbw file2.xyz"
+> orca_run.sh -i input.inp -o output.out -p nprocs -m maxcore -a "file1.gbw file2.xyz"
 
 Only input is obligatory, default output = input_basename.out.
 
@@ -32,3 +32,15 @@ Only input is obligatory, default output = input_basename.out.
 **maxcore** is the ORCA maximum memory per core in MB.
 
 **-a** flag sets extra files that you need to run the calculation, as example orbital files .gbw or .xyz files. If it is more than one file, make sure to put them in double quotes. Remember that they do not need to be in the same directory, as long as you specify the full or relative path.
+
+# ORCA_plot_mo
+
+orca_plot_mo makes use of the orca_plot tool to automatically plot ORCA orbitals into Gaussian Cube files. The usage is straightforward:
+
+> orca_plot_mo.sh orbital_file MO_number grid_density
+
+The orbital_file can be any from ORCA multiple orbital files .gbw, .uno, .qro, etc. The grid_density has a default value of 40 (orca_plot default) and, if specified, should contain only one number. A value between 80-100 already gives high resolution plots, and the default value is good for visualization only.
+
+# ORCA_plot_edens
+
+The orca_plot_edens script plots the total electron density from an ORCA .gbw file into a Gaussian cube file. You just need to specify the input.
