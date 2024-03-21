@@ -10,7 +10,7 @@ orca_run is a shell/bash script to help users run electronic structure calculati
 
 The main advantage of the script is that you do not need to worry about running multiple inputs in the same folder, and you can specify from the command line the number of cores and memory to be used in the calculation without having to modify the input files one by one and directly. The script also deletes remaining temporary files in the case of crashing and stores post-calculation files in a new folder in the current directory.
 
-This version of ORCA_run is updated from a previous repository in my GitHub with this script name. That one was archived and had a bug 
+This version of ORCA_run is updated from a previous repository in my GitHub with this script name. That one was archived and had a bug on erasing temporary files.
 
 ORCA's official website can be accessed at: **https://orcaforum.kofo.mpg.de**
 
