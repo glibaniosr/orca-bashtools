@@ -38,7 +38,7 @@ do
 		i)	input=${OPTARG}
 			# New input to be placed in the runfiles folder to see modifications
 			inputNEW="${input%.*}.new.inp"
-			RUNDIR="${ORCASCR}" #/${input%.*}-$$"
+			RUNDIR="${ORCASCR}/${input%.*}-$$"
 			;;
 		o)	output=${OPTARG};;
 		p)	nprocs=${OPTARG};;
