@@ -1,3 +1,4 @@
+#!/bin/bash
 #by Gabriel Libânio Silva Rodrigues
 
 # Script to run Orca quantum chemistry program, moving the temporary files to a scratch directory
