@@ -107,6 +107,13 @@ ${ORCAPATH}/orca ${input} > ${CALCDIR}/${output}
 ${ORCAPATH}/orca "${input}" > "${CALCDIR}/${output}"
 
 # Do final operation on post-calculation ORCA files
+# Remove extra files
+if [ -n "$afile" ]; then
+	for file in ${afile[@]}
+		do rm ${file}
+	done
+fi
+# Move calculation files to original folder
 mkdir -p "${CALCDIR}/${input%.*}-runfiles"
 mv ${input} ${inputNEW}
 
